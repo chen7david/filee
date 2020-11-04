@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-class Filer {
+class Filee {
     constructor(path){
         this.path = path
         this.file = {}
@@ -56,4 +56,4 @@ class Filer {
     }
 }
 
-module.exports = Filer
+module.exports = Filee
