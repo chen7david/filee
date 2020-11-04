@@ -2,7 +2,7 @@
 
 ## Getting Started
 ```js
-const Filer = require('filer-js')
+const Filer = require('filee')
 
 const someAsyncFunction  = async () => {
     const file = await Filer.create('name.info') // creates a new file with the given name and file extenstion and retuns a filer obeject.
@@ -16,7 +16,7 @@ const someAsyncFunction  = async () => {
 if you wish to populate the file object before writing it to disk you can do this:
 
 ```js
-const Filer = require('filer-js')
+const Filer = require('filee')
 
 const someAsyncFunction  = async () => {
     const file = new Filer('name.info') // creates a new file with the given name and file extenstion and retuns a filer obeject.
