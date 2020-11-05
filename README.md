@@ -26,4 +26,11 @@ const someAsyncFunction  = async () => {
     await file.delete() // deletes the file and retuns a boolean.
 }
 ```
+
+```js
+async graph(){
+    const graph = await Filee.load(this.graphPath())
+    await graph.read()
+    return graph ? graph.getContent() : []  
+}
 ```
