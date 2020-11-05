@@ -13,7 +13,7 @@ class Filee {
     }
 
     static async create(path, data){
-        return fs.promises.writeFile(path, JSON.stringify(data), 'utf8')
+        return fs.promises.writeFile(path, JSON.stringify({data}), 'utf8')
         .then(async () => {
             const file = new this(path)
             await file.read()
@@ -36,21 +36,21 @@ class Filee {
     }
 
     getContent(){
-        return this.state.container
+        return this.state.data
     }
 
     patch(params = {}){
-        Object.assign(this.state, params)
+        Object.assign(this.state.data, params)
         return this
     }
 
     update(params = {}){
-        this.state = params
+        this.state.data = params
         return this
     }
 
     async save(){
-        return await this.write(this.state)
+        return await this.write(this.state.data)
     }
 
     async delete(){
